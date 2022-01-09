@@ -11,6 +11,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="724.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SimpleTextEditorController">
    <children>
@@ -131,10 +133,24 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <TextArea fx:id="txtArea" layoutX="14.0" layoutY="97.0" prefHeight="585.0" prefWidth="996.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="97.0" />
       <Label layoutX="888.0" layoutY="694.0" text="Words:" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="694.0" />
       <Label fx:id="lblWordCount" layoutX="955.0" layoutY="694.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="694.0" />
       <Label layoutX="17.0" layoutY="694.0" text="Finded Count :" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="694.0" />
       <Label fx:id="lblFoundCount" layoutX="126.0" layoutY="694.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="694.0" />
+      <TextArea fx:id="txtArea" layoutX="20.0" layoutY="101.0" prefHeight="577.0" prefWidth="985.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="101.0" />
+      <Rectangle fx:id="saveFIleAlert" arcHeight="5.0" arcWidth="5.0" fill="#dfe6e9" height="200.0" layoutX="264.0" layoutY="290.0" stroke="#b2bec3" strokeType="INSIDE" width="432.0" />
+      <Label fx:id="lblSaveFile" layoutX="309.0" layoutY="331.0" text="Enter a file name :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFileName" layoutX="309.0" layoutY="377.0" prefHeight="26.0" prefWidth="345.0" />
+      <Button fx:id="btnSaveFileCancel" layoutX="347.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnSaveFileCancelOnAction" prefHeight="26.0" prefWidth="109.0" text="Cancel" />
+      <Button fx:id="btnSaveFile" layoutX="494.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnSaveFileOnAction" prefHeight="26.0" prefWidth="109.0" text="Save" />
+      <ImageView fx:id="imgCancel" fitHeight="19.0" fitWidth="36.0" layoutX="671.0" layoutY="298.0" onMouseClicked="#imgCancelOnMouseClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/cancel.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
