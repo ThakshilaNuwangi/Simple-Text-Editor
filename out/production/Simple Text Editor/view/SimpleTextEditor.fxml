@@ -8,11 +8,10 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="724.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SimpleTextEditorController">
    <children>
@@ -114,19 +113,18 @@
             </ImageView>
          </graphic>
       </Button>
-      <Separator layoutX="1.0" layoutY="87.0" prefHeight="0.0" prefWidth="1024.0" AnchorPane.bottomAnchor="634.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0" />
+      <Separator layoutY="110.0" prefHeight="0.0" prefWidth="1024.0" AnchorPane.bottomAnchor="611.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0" />
       <AnchorPane layoutX="378.0" layoutY="36.0" prefHeight="39.0" prefWidth="625.0" AnchorPane.bottomAnchor="649.0" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="36.0">
          <children>
-            <TextField fx:id="txtSearch" layoutX="14.0" layoutY="7.0" promptText="Search Text" />
-            <TextField fx:id="txtReplace" layoutX="369.0" layoutY="7.0" promptText="Replace Text" />
-            <Button fx:id="btnReplace" layoutX="540.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnReplaceOnAction" text="Replace" />
-            <Button fx:id="btnFind" layoutX="247.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnFindOnAction" text="Find" />
-            <ImageView fx:id="findUp" fitHeight="39.0" fitWidth="29.0" layoutX="185.0" layoutY="6.0" onMouseClicked="#findUpOnAction" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="txtSearch" layoutX="14.0" layoutY="7.0" prefHeight="26.0" prefWidth="201.0" promptText="Search Text" />
+            <TextField fx:id="txtReplace" layoutX="369.0" layoutY="7.0" prefHeight="26.0" prefWidth="238.0" promptText="Replace Text" />
+            <Button fx:id="btnFind" layoutX="279.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnFindOnAction" text="Find" />
+            <ImageView fx:id="findUp" fitHeight="39.0" fitWidth="29.0" layoutX="214.0" layoutY="6.0" onMouseClicked="#findUpOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/arrow-up.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="findDown" fitHeight="39.0" fitWidth="29.0" layoutX="207.0" layoutY="5.0" onMouseClicked="#ownOnAction" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="findDown" fitHeight="39.0" fitWidth="29.0" layoutX="237.0" layoutY="5.0" onMouseClicked="#findDownOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/arrow-down.png" />
                </image>
@@ -137,20 +135,12 @@
       <Label fx:id="lblWordCount" layoutX="955.0" layoutY="694.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="694.0" />
       <Label layoutX="17.0" layoutY="694.0" text="Finded Count :" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="694.0" />
       <Label fx:id="lblFoundCount" layoutX="126.0" layoutY="694.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="694.0" />
-      <TextArea fx:id="txtArea" layoutX="20.0" layoutY="101.0" prefHeight="577.0" prefWidth="985.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="101.0" />
-      <Rectangle fx:id="saveFIleAlert" arcHeight="5.0" arcWidth="5.0" fill="#dfe6e9" height="200.0" layoutX="264.0" layoutY="290.0" stroke="#b2bec3" strokeType="INSIDE" width="432.0" />
-      <Label fx:id="lblSaveFile" layoutX="309.0" layoutY="331.0" text="Enter a file name :">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtFileName" layoutX="309.0" layoutY="377.0" prefHeight="26.0" prefWidth="345.0" />
-      <Button fx:id="btnSaveFileCancel" layoutX="347.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnSaveFileCancelOnAction" prefHeight="26.0" prefWidth="109.0" text="Cancel" />
-      <Button fx:id="btnSaveFile" layoutX="494.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnSaveFileOnAction" prefHeight="26.0" prefWidth="109.0" text="Save" />
-      <ImageView fx:id="imgCancel" fitHeight="19.0" fitWidth="36.0" layoutX="671.0" layoutY="298.0" onMouseClicked="#imgCancelOnMouseClick" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@assets/cancel.png" />
-         </image>
-      </ImageView>
+      <TextArea fx:id="txtArea" layoutX="20.0" layoutY="128.0" prefHeight="550.0" prefWidth="985.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="128.0" />
+      <ToggleButton fx:id="btnRegEx" layoutX="393.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnRegexOnAction" text="RegEx" />
+      <ToggleButton fx:id="btnCaseSensitive" layoutX="478.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnCaseSensitiveOnAction" text="Case Sensitive" />
+      <Separator layoutX="375.0" layoutY="28.0" orientation="VERTICAL" prefHeight="83.0" prefWidth="2.0" />
+      <Separator layoutX="727.0" layoutY="28.0" orientation="VERTICAL" prefHeight="83.0" prefWidth="0.0" />
+      <Button fx:id="btnReplace" layoutX="769.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnReplaceOnAction" text="Replace" />
+      <Button fx:id="btnReplaceAll" layoutX="876.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnReplaceAllOnAction" text="Replace All" />
    </children>
 </AnchorPane>

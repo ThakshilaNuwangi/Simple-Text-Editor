@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="460.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutUsController">
+    <children>
+        <Label layoutX="140.0" layoutY="198.0" text="Simple Text Editor" textFill="#009933">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Separator layoutX="27.0" layoutY="23.0" prefHeight="16.0" prefWidth="457.0" />
+        <Separator layoutX="27.0" layoutY="422.0" prefHeight="16.0" prefWidth="457.0" />
+        <Separator layoutX="26.0" layoutY="31.0" orientation="VERTICAL" prefHeight="399.0" prefWidth="6.0" />
+        <Separator layoutX="481.0" layoutY="31.0" orientation="VERTICAL" prefHeight="399.0" prefWidth="6.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="213.0" layoutY="241.0" text="Version 0.1.1">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="277.0" text="Simple Text Editor is a small and lightweight text editor." />
+      <Label layoutX="144.0" layoutY="307.0" text="Copyright © 2022 - B.G.T. Nuwangi " />
+    </children>
+
+</AnchorPane>
