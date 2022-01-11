@@ -7,7 +7,7 @@ The source code is available to everyone under the standard [MIT License](https:
 
 ### Simple Text Editor
 
-![img](src/view/assets/Simple Text Editor Image.png)
+![img](src/view/assets/SimpleTextEditorImage.png)
 
 ### License
 Copyright © 2022 -  B G Thakshila Nuwangi. All rights reserved.
