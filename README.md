@@ -6,6 +6,7 @@ This source code is available
 The source code is available to everyone under the standard [MIT License](https://choosealicense.com/licenses/mit/).
 
 ### Simple Text Editor
+
 ![img](src/view/assets/Simple Text Editor Image.png)
 
 ### License
