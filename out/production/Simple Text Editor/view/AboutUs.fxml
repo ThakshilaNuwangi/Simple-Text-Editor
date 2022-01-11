@@ -20,7 +20,7 @@
         <Separator layoutX="481.0" layoutY="31.0" orientation="VERTICAL" prefHeight="399.0" prefWidth="6.0" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@assets/logo.png" />
+            <Image url="@assets/logoo.png" />
          </image>
       </ImageView>
       <Label layoutX="213.0" layoutY="241.0" text="Version 0.1.1">

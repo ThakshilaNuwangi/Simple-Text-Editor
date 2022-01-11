@@ -132,9 +132,9 @@
          </children>
       </AnchorPane>
       <Label layoutX="888.0" layoutY="694.0" text="Words:" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="694.0" />
-      <Label fx:id="lblWordCount" layoutX="955.0" layoutY="694.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="694.0" />
-      <Label layoutX="17.0" layoutY="694.0" text="Finded Count :" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="694.0" />
-      <Label fx:id="lblFoundCount" layoutX="126.0" layoutY="694.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="694.0" />
+      <Label fx:id="lblWordCount" layoutX="955.0" layoutY="694.0" text="0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="694.0" />
+      <Label layoutX="17.0" layoutY="694.0" text="Found Count :" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="694.0" />
+      <Label fx:id="lblFoundCount" layoutX="126.0" layoutY="694.0" text="0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="694.0" />
       <TextArea fx:id="txtArea" layoutX="20.0" layoutY="128.0" prefHeight="550.0" prefWidth="985.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="128.0" />
       <ToggleButton fx:id="btnRegEx" layoutX="393.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnRegexOnAction" text="RegEx" />
       <ToggleButton fx:id="btnCaseSensitive" layoutX="478.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnCaseSensitiveOnAction" text="Case Sensitive" />

@@ -51,6 +51,7 @@ public class SimpleTextEditorController implements SetTitle{
     public Button btnReplaceAll;
     private Stage stage;
     private Clipboard clipboard;
+    private String location;
     private boolean textChanged;
     private Matcher matcher;
 
@@ -63,13 +64,16 @@ public class SimpleTextEditorController implements SetTitle{
         updateTitle("Untitled");
 
         txtArea.textProperty().addListener((observable, oldValue, newValue) -> {
+            lblWordCount.setText(String.valueOf(txtArea.getText().split(" ").length));
             if (!fileName.startsWith("*")){
                 fileName="*"+fileName;
             }
             updateTitle(fileName);
         });
 
-        txtSearch.textProperty().addListener((observable, oldValue, newValue) -> textChanged = true);
+        txtSearch.textProperty().addListener((observable, oldValue, newValue) ->
+                textChanged = true
+        );
 
     }
 
